@@ -14,15 +14,31 @@
 }
 
 .msg-usuario input:first-of-type {
-  width: 7em;
+  width: 15%;
   height: 1.5em;
   text-indent: 0.5em;
 }
 
 .msg-usuario input:last-of-type {
-  width: 31em;
+  width: 70%;
   height: 1.5em;
   text-indent: 0.5em;
+}
+
+.msg-usuario button {
+  width: auto;
+  height: 1.95em;
+  color: white;
+  border: none;
+  background-color: black;
+}
+
+.msg-usuario button:hover {
+  background-color: #8d8d8d;
+}
+
+.msg-usuario button:active {
+  background-color: black;
 }
 
 .container-mensagem {
