@@ -1,6 +1,6 @@
 import React from 'react';
-import './MensagensEnviadas.css';
 import styled from 'styled-components'
+import PropsTypes from 'prop-types';
 
 
 const MensagemEnviada = styled.div`
@@ -12,9 +12,11 @@ const MensagemEnviada = styled.div`
     align-items: flex-end;
 `
 
+
 const SpanMensagem = styled.span`
     padding-left: 0.5em;
 `
+
 
 class MensagensEnviadas extends React.Component {
     constructor(props) {
@@ -34,5 +36,12 @@ class MensagensEnviadas extends React.Component {
         )
     }
 }
+
+
+MensagemEnviada.propTypes = {
+  nome: PropsTypes.string,
+  msg: PropsTypes.string,
+}
+
 
 export default MensagensEnviadas

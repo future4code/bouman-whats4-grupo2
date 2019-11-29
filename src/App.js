@@ -1,18 +1,20 @@
 import React from 'react';
-import './App.css';
 import MensagensEnviadas from './components/MensagensEnviadas/MensagensEnviadas';
 import styled from 'styled-components';
-// import PropsTypes from 'prop-types';
+
+
+//       Styled-Component    //
 const MainContainer = styled.div`
   text-align: center;
-  width: 60vh;
+  width: 70vh;
   margin: 0 auto;
   height: 100%;
   border: 1px solid black;
 `
+
 const ContainerMensagem = styled.div `
   width: auto;
-  height: 96vh;
+  height: 93vh;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -23,6 +25,7 @@ const MsgUsuario = styled.div`
   bottom: 0;
   margin-top: 1em;
 `
+
 const InputNome = styled.input `
   width: 15%;
   height: 1.5em;
@@ -48,6 +51,8 @@ const BotaoEnviar = styled.button`
     background-color: black;
   }
 `
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -57,16 +62,22 @@ class App extends React.Component {
       feedMensagens: [],
     }
   }
+
+
   controlaInputUsuario = e => {
     this.setState({
       usuario: e.target.value,
     })
   }
+
+
   controlaInputMensagem = e => {
     this.setState({
       mensagem: e.target.value,
     })
   }
+
+
   enviarMensagem = () => {
     const msg = {
       nome: this.state.usuario,
@@ -74,14 +85,15 @@ class App extends React.Component {
     }
     const copiaFeedMensagens = [...this.state.feedMensagens, msg]
     this.setState({ feedMensagens: copiaFeedMensagens })
-    console.log(this.state.feedMensagens)
   }
+
+
   render() {
     return (
       <MainContainer>
         <ContainerMensagem>
           {this.state.feedMensagens.map(msg => {
-            return <MensagensEnviadas nome={msg.nome} mensagem={msg.msg}></MensagensEnviadas>
+            return <MensagensEnviadas key={this.state.feedMensagens.indexOf(msg)} nome={msg.nome} mensagem={msg.msg}></MensagensEnviadas>
           })}
         </ContainerMensagem>
         <MsgUsuario>
@@ -93,8 +105,6 @@ class App extends React.Component {
     )
   }
 }
-// App.propTypes = {
-//   nome: PropsTypes.string.isRequired,
-//   msg: PropsTypes.string.isRequired,
-// }
+
+
 export default App;
