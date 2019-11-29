@@ -5,14 +5,16 @@ class MensagensEnviadas extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            nomeUsuario: props.nome,
+            mensagem: props.mensagem,
         }
     }
 
     render () {
         return (
-            <div>
-
+            <div className="msg-enviada">
+                <span><strong>{ this.state.nomeUsuario + ": "}</strong></span>
+                <span>{ this.state.mensagem }</span>
             </div>
         )
     }

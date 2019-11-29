@@ -1,24 +1,22 @@
-import React from 'react';
-import './ConteudoPrincipal.css';
-import MensagensEnviadas from '../MensagensEnviadas/MensagensEnviadas';
-import MensagemDoUsuario from '../MensagemDoUsuario/MensagemDoUsuario'
+// import React from 'react';
+// import './ConteudoPrincipal.css';
+// import MensagensEnviadas from '../MensagensEnviadas/MensagensEnviadas';
 
-class ConteudoPrincipal extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
+// class ConteudoPrincipal extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
 
-        }
-    }
+//         }
+//     }
 
-    render () {
-        return (
-            <div>
-                <MensagensEnviadas />
-                <MensagemDoUsuario />
-            </div>
-        )
-    }
-}
+//     render () {
+//         return (
+//             <div className="conteudo-principal">
+//                 <MensagensEnviadas />
+//             </div>
+//         )
+//     }
+// }
 
-export default ConteudoPrincipal
+// export default ConteudoPrincipal

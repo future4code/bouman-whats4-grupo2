@@ -1,0 +1,13 @@
+.msg-enviada {
+    width: auto;
+    height: auto;
+    display: flex;
+    padding: 15px;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.msg-enviada span {
+    padding-left: 0.5em;
+
+}
