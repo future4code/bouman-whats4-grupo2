@@ -3,7 +3,7 @@
     height: auto;
     display: flex;
     padding: 15px;
-    justify-content: end;
+    justify-content: flex-start;
     align-items: flex-end;
 }
 

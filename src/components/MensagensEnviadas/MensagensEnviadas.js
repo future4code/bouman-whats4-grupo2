@@ -1,5 +1,20 @@
 import React from 'react';
 import './MensagensEnviadas.css';
+import styled from 'styled-components'
+
+
+const MensagemEnviada = styled.div`
+    width: auto;
+    height: auto;
+    display: flex;
+    padding: 15px;
+    justify-content: flex-start;
+    align-items: flex-end;
+`
+
+const SpanMensagem = styled.span`
+    padding-left: 0.5em;
+`
 
 class MensagensEnviadas extends React.Component {
     constructor(props) {
@@ -12,10 +27,10 @@ class MensagensEnviadas extends React.Component {
 
     render () {
         return (
-            <div className="msg-enviada">
-                <span><strong>{ this.state.nomeUsuario + ": "}</strong></span>
-                <span>{ this.state.mensagem }</span>
-            </div>
+            <MensagemEnviada>
+                <SpanMensagem><strong>{ this.state.nomeUsuario + ": "}</strong></SpanMensagem>
+                <SpanMensagem>{ this.state.mensagem }</SpanMensagem>
+            </MensagemEnviada>
         )
     }
 }
